@@ -21,7 +21,22 @@ probability003 <- function(number){
   return(hit/number)
 }
 
+probability003_extra <- function(number,a){
+  'This functions calculates the probability that in a sample of five there are'
+  'less than -a- rotten eggs.'
+  hit = 0
+  for (i in c(1:number)){
+    if (rotten_in_sample() <= a){
+      hit = hit + 1
+    }
+  }
+  return(hit/number)
+}
+
 'Some results related to the probabilities'
 for (i in c(0:5)) {
   print(probability003(1000))
+}
+for (i in c(0:5)) {
+  print(probability003_extra(1000, 2))
 }
