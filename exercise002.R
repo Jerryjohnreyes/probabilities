@@ -16,7 +16,7 @@ exercise002 <- function(){
 
 probability002 <- function(number){
   'This function will return the approximate probability that a poker hand'
-  'has exactly two kings.'
+  'has exactly two kings.'s
   ocurrences = vector(mode='list', length = number)
   for (i in c(1:number)){
     number_of_kings = exercise002()
